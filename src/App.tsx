@@ -1,5 +1,6 @@
 import React from 'react';
-import WelcomePage from './WelcomePage';
+import WelcomePage from './components/WelcomePage';
+import './styles/App.css'
 
 function App() {
   return (

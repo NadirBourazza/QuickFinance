@@ -11,3 +11,11 @@ code {
   font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
     monospace;
 }
+
+@media (prefers-reduced-motion: no-preference)
+  {
+  :root {
+    scroll-behavior: smooth;
+    background-color: #1F1F1F;;
+  }
+}

@@ -1,7 +1,7 @@
 import React from 'react';
 import { Navbar, Modal } from 'react-bootstrap'
 import 'bootstrap/dist/css/bootstrap.min.css';
-import './WelcomePage.css'
+import '../styles/WelcomePage.css'
 import Login from './LoginComponent';
 
 export default class WelcomePage extends React.Component<{}, { modalState: boolean }> {
@@ -26,6 +26,7 @@ export default class WelcomePage extends React.Component<{}, { modalState: boole
         </Navbar>
 
         <Modal
+          backdrop={false}
           show={this.state.modalState}
           onHide={() => this.setState(prevState => ({
             modalState: !prevState.modalState,
