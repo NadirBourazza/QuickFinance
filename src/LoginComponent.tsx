@@ -21,6 +21,7 @@ export default function Login() {
         <Form.Group controlId="email">
           <Form.Label>Email</Form.Label>
           <Form.Control
+            className='emailField'
             autoFocus
             type="email"
             value={email}
@@ -30,12 +31,13 @@ export default function Login() {
         <Form.Group className="lg" controlId="password">
           <Form.Label>Password</Form.Label>
           <Form.Control
+            className='passwordField'
             type="password"
             value={password}
             onChange={(e) => setPassword(e.target.value)}
           />
         </Form.Group>
-        <Button size="lg" type="submit" disabled={!validateForm()}>
+        <Button size="lg" type="submit" className='submitButton' disabled={!validateForm()}>
           Login
         </Button>
       </Form>

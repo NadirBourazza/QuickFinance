@@ -7,4 +7,42 @@
     margin: 0 auto;
     max-width: 320px;
   }
+
+  .submitButton{
+    margin-top: 10px;
+  }
+
+  /* Email Field Styling */
+  .emailField{
+    background-color: #3D3D3D;
+    color: white;
+    border: none;
+  }
+
+  .emailField:hover{
+    background-color: #1F1F1F;
+    color: white;
+  }
+
+  .emailField:focus{
+    background-color: #1F1F1F;
+    color: white;
+  }
+
+  /* Password Field Styling */
+  .passwordField{
+    background-color: #3D3D3D;
+    color: white;
+    border: none;
+  }
+
+  .passwordField:hover{
+    background-color: #1F1F1F;
+    color: white;
+  }
+
+  .passwordField:focus{
+    background-color: #1F1F1F;
+    color: white;
+  }
 }

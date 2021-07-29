@@ -30,18 +30,12 @@ export default class WelcomePage extends React.Component<{}, { modalState: boole
           onHide={() => this.setState(prevState => ({
             modalState: !prevState.modalState,
           }))}
-          id='WelcomeModal'
-          bg='dark'
           text='light'
-          size='lg'
           centered={true}
         >
-          <Modal.Body>
-            <Modal.Title >Welcome to Quick Finance</Modal.Title>
+          <Modal.Body id='WelcomeModal'>
+            <Modal.Title id='WelcomeModalTitle'>Welcome to Quick Finance</Modal.Title>
             <Login/>
-          </Modal.Body>
-          <Modal.Body>
-
           </Modal.Body>
         </Modal>
       </>
