@@ -19,7 +19,7 @@ export default function Login() {
     <div className="Login">
       <Form onSubmit={handleSubmit}>
         <Form.Group controlId="email">
-          <Form.Label>Email</Form.Label>
+          <Form.Label className='Label'>Email</Form.Label>
           <Form.Control
             className='emailField'
             autoFocus
@@ -29,7 +29,7 @@ export default function Login() {
           />
         </Form.Group>
         <Form.Group className="lg" controlId="password">
-          <Form.Label>Password</Form.Label>
+          <Form.Label className='Label'>Password</Form.Label>
           <Form.Control
             className='passwordField'
             type="password"
