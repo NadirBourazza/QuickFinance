@@ -1,5 +1,5 @@
 import React from 'react';
-import { Navbar, Modal, Offcanvas, Container } from 'react-bootstrap'
+import { Navbar } from 'react-bootstrap'
 import 'bootstrap/dist/css/bootstrap.min.css';
 import '../styles/WelcomePage.css'
 import Login from './LoginComponent';
@@ -9,8 +9,6 @@ export default class WelcomePage extends React.Component<{}, { modalState: boole
     super(props);
     this.state = { modalState: false, offCanvasState: false };
   }
-
-  
 
   componentDidMount() {
     this.setState(prevState => ({
@@ -26,7 +24,7 @@ export default class WelcomePage extends React.Component<{}, { modalState: boole
     return (
       <div className='Webpage'>
 
-        <Navbar variant="dark" bg='dark' expand="lg">
+        <Navbar className='NavBar' expand="lg">
           <Navbar.Brand id='NavBrand'>Quick Finance</Navbar.Brand>
         </Navbar>
 
@@ -37,7 +35,7 @@ export default class WelcomePage extends React.Component<{}, { modalState: boole
               offCanvasState: !prevState.modalState,
             }))} 
         >
-          <Offcanvas.Header closeButton={false} >
+          <Offcanvas.Header className='OffCanvasHeader' closeButton={false} >
             <Offcanvas.Title className='OffCanvasTitle'>Quick Finance</Offcanvas.Title>
           </Offcanvas.Header>
           <Offcanvas.Body>
@@ -46,17 +44,25 @@ export default class WelcomePage extends React.Component<{}, { modalState: boole
           </Offcanvas.Body>
         </Offcanvas> */}
 
-        {/* <div className='Welcome'>
-          
-        </div> */}
+        <div className='OffCanvas'>
+          <img className='iPhoneImage' src={`https://store.storeimages.cdn-apple.com/4668/as-images.apple.com/is/iphone-12-pro-max-blue-hero?wid=940&hei=1112&fmt=png-alpha&.v=1604021658000`} alt='iPhone' />
+            <div className='Message'>
+              Welcome
+              <br/>
+              To Quick Finance
+            </div>
+        </div>
+
+        <div className='WelcomePageContainer'></div>
 
         <div className='Welcome' >
-        <h1 className='Title'>Welcome to Quick Finance</h1>
+          <h1 className='Title'>Welcome to Quick Finance</h1>
           <p className='Description'>
-            Thank you for choosing Quick Finance. 
-            Sign up for the best tool today!
+            Thank you for choosing Quick Finance.
+            <br/>
+            Sign up today!
           </p>
-          <Login/>
+          <Login />
         </div>
       </div>
     )
